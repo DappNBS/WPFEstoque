@@ -119,6 +119,7 @@ namespace UrusTools
             get { return (CornerRadius)GetValue(CornerRadiusProperty); }
             set { SetValue(CornerRadiusProperty, value); }
         }
+
         public static readonly DependencyProperty ContentDecorationsProperty =
             DependencyProperty.Register("ContentDecorations", typeof(TextDecorationCollection), typeof(FButton), 
                 new PropertyMetadata(null));
@@ -130,12 +131,12 @@ namespace UrusTools
         }
 
         public static readonly DependencyProperty FButtonOrientationProperty =
-            DependencyProperty.Register("FBOrientation", typeof(FBOrientationType), typeof(FButton),
-                new PropertyMetadata(FBOrientationType.Horizontal));
+            DependencyProperty.Register("FBOrientation", typeof(string), typeof(FButton),
+                new PropertyMetadata("Horizontal"));
 
-        public FBOrientationType FBOrientation
+        public string FBOrientation
         {
-            get { return (FBOrientationType)GetValue(FButtonOrientationProperty); }
+            get { return (string)GetValue(FButtonOrientationProperty); }
             set
             {
                 SetValue(FButtonOrientationProperty, value);

@@ -37,5 +37,10 @@ namespace Urus.DemoWindow.Views
         {
             InitializeComponent();
         }
+
+        private void FButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
