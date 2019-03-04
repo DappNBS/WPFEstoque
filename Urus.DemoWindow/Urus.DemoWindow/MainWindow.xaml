@@ -1,0 +1,45 @@
+﻿<Window x:Class="Urus.DemoWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:urustools="clr-namespace:UrusTools;assembly=Urus.Tools"
+        xmlns:local="clr-namespace:Urus.DemoWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="980">
+
+    <DockPanel>
+        <Border  x:Name="TitleNav" DockPanel.Dock="Top" BorderBrush="Goldenrod" Background="SteelBlue" BorderThickness="0,0,0,0.4" Height="45">
+            <StackPanel  Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Demo" FontSize="24" Margin="5,0,10,0" Foreground="WhiteSmoke"/>
+            </StackPanel>
+        </Border>
+        <Grid x:Name="brMainBg" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280*" MaxWidth="300"/>
+                <ColumnDefinition Width="700*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Left Nav -->
+            <Border x:Name="lnavContainer" Grid.Column="0" Background="Azure" BorderThickness="0,0,0.4,0">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="导航菜单" FontSize="20" BorderThickness="0,0,0,1" BorderBrush="BurlyWood" />
+                    <Menu BorderBrush="Transparent" VerticalAlignment="Center" BorderThickness="1">
+                        <Menu.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </Menu.ItemsPanel>
+                        <MenuItem CommandParameter="0" FontSize="18" Header="按钮样式" Click="NavLabel_Click" HorizontalAlignment="Stretch"></MenuItem>
+                        <MenuItem CommandParameter="1" FontSize="18" Header="Test样式" Click="NavLabel_Click" HorizontalAlignment="Stretch"></MenuItem>
+                    </Menu>
+
+                </StackPanel>
+            </Border>
+            <Border x:Name="RightBorderBg" Grid.Column="1" Background="Transparent">
+                <Grid x:Name="rmainContainer" >
+                    
+                </Grid>
+            </Border>
+        </Grid>
+    </DockPanel>
+</Window>

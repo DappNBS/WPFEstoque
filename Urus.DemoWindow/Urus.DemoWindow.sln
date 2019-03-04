@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urus.DemoWindow", "Urus.DemoWindow\Urus.DemoWindow.csproj", "{49A8EDDF-2A05-48A4-BDA4-FD5AD8D7D5DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urus.Tools", "..\Urus.Tools\Urus.Tools\Urus.Tools.csproj", "{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49A8EDDF-2A05-48A4-BDA4-FD5AD8D7D5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A8EDDF-2A05-48A4-BDA4-FD5AD8D7D5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A8EDDF-2A05-48A4-BDA4-FD5AD8D7D5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A8EDDF-2A05-48A4-BDA4-FD5AD8D7D5DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {981AF608-6F8F-40C7-9A96-B5C053487C9C}
+	EndGlobalSection
+EndGlobal

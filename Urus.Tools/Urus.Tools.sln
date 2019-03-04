@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urus.Tools", "Urus.Tools\Urus.Tools.csproj", "{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD4CA0E-A5FC-4A22-8043-FD16F29F0569}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AED9E2C8-6890-4D67-B5D4-26973383490B}
+	EndGlobalSection
+EndGlobal

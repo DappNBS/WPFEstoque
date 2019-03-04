@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:UrusTools">
+    <!-- Copyright © NBS-Tech Team 2019.All rights reserved. -->
+    <FontFamily x:Key="UrusFontAwesome" >pack://application;,,,/Resources/#FontAwesome</FontFamily>
+    <!-- Brush -->
+    <SolidColorBrush x:Key="TextForegroundColor" Color="#555555"/>
+    <!-- /Brush -->
+    
+    <!-- FHButton Style -->
+
+    <!-- /FHButton Style -->
+    <!-- FVButton Style -->
+
+    <!-- /FVButton Style -->
+
+</ResourceDictionary>
