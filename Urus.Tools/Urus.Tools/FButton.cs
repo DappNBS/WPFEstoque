@@ -48,6 +48,17 @@ namespace UrusTools
             set { SetValue(PressedForegroundProperty, value); }
         }
 
+        public static readonly DependencyProperty MouseOverBackgroundProperty =
+            DependencyProperty.Register("MouseOverBackground", typeof(Brush), typeof(FButton),
+                new PropertyMetadata(new SolidColorBrush(GRAY_BG_COLOR)));
+
+        public Brush MouseOverBackground
+        {
+            get { return (Brush)GetValue(MouseOverBackgroundProperty); }
+            set { SetValue(MouseOverBackgroundProperty, value); }
+        }
+
+
 
         #endregion
     }
