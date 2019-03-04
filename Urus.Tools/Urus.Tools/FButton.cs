@@ -99,6 +99,60 @@ namespace UrusTools
             get { return (Thickness)GetValue(FIconMarginProperty); }
             set { SetValue(FIconMarginProperty, value); }
         }
+
+        public static readonly DependencyProperty AllowsAnimationProperty =
+           DependencyProperty.Register("AllowsAnimation", typeof(bool), typeof(FButton), 
+               new PropertyMetadata(true));
+
+        public bool AllowsAnimation
+        {
+            get { return (bool)GetValue(AllowsAnimationProperty); }
+            set { SetValue(AllowsAnimationProperty, value); }
+        }
+
+        public static readonly DependencyProperty CornerRadiusProperty =
+            DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(FButton), 
+                new PropertyMetadata(new CornerRadius(2)));
+
+        public CornerRadius CornerRadius
+        {
+            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
+            set { SetValue(CornerRadiusProperty, value); }
+        }
+        public static readonly DependencyProperty ContentDecorationsProperty =
+            DependencyProperty.Register("ContentDecorations", typeof(TextDecorationCollection), typeof(FButton), 
+                new PropertyMetadata(null));
+
+        public TextDecorationCollection ContentDecorations
+        {
+            get { return (TextDecorationCollection)GetValue(ContentDecorationsProperty); }
+            set { SetValue(ContentDecorationsProperty, value); }
+        }
+
+        public static readonly DependencyProperty FButtonOrientationProperty =
+            DependencyProperty.Register("FBOrientation", typeof(FBOrientationType), typeof(FButton),
+                new PropertyMetadata(FBOrientationType.Horizontal));
+
+        public FBOrientationType FBOrientation
+        {
+            get { return (FBOrientationType)GetValue(FButtonOrientationProperty); }
+            set
+            {
+                SetValue(FButtonOrientationProperty, value);
+            }
+        }
+
         #endregion
+
+        static FButton()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(FButton), new FrameworkPropertyMetadata(typeof(FButton)));
+        }
+    }
+
+    public enum FBOrientationType
+    {
+        Vertical,
+        Horizontal
     }
 }

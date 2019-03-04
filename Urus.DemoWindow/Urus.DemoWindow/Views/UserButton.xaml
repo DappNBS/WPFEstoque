@@ -9,6 +9,12 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <!-- Copyright © NBS-Tech Team 2019.All rights reserved. -->
     <Grid>
-        <Label Content="Button" FontSize="36" Foreground="Red" />
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <Label Content="Button" FontSize="36" Foreground="Red" />
+
+            <Button Width="100" Height="25" BorderBrush="Red" FontStyle="Normal"  BorderThickness="0,0,0,2" Background="LightGray" Foreground="WhiteSmoke">
+                Hello
+            </Button>
+        </WrapPanel>
     </Grid>
 </UserControl>
