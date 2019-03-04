@@ -58,8 +58,47 @@ namespace UrusTools
             set { SetValue(MouseOverBackgroundProperty, value); }
         }
 
+        public static readonly DependencyProperty MouseOverForegroundProperty =
+            DependencyProperty.Register("MouseOverForeground", typeof(Brush), typeof(FButton),
+                new PropertyMetadata(new SolidColorBrush(GOLD_FOREGROUND_COLOR)));
 
+        public Brush MouseOverForeground
+        {
+            get { return (Brush)GetValue(MouseOverForegroundProperty); }
+            set { SetValue(MouseOverForegroundProperty, value); }
+        }
+        #endregion
 
+        #region FIcon 
+        public static readonly DependencyProperty FIconProperty =
+            DependencyProperty.Register("FIcon", typeof(string), typeof(FButton),
+                new PropertyMetadata("\ue604"));
+
+        public string FIcon
+        {
+            get { return (string)GetValue(FIconProperty); }
+            set { SetValue(FIconProperty, value); }
+        }
+
+        public static readonly DependencyProperty FIconSizeProperty =
+            DependencyProperty.Register("FIconSize", typeof(int), typeof(FButton),
+                new PropertyMetadata(20));
+
+        public int FIconSize
+        {
+            get { return (int)GetValue(FIconSizeProperty); }
+            set { SetValue(FIconSizeProperty, value); }
+        }
+
+        public static readonly DependencyProperty FIconMarginProperty =
+            DependencyProperty.Register("FIconMargin", typeof(Thickness), typeof(FButton),
+                new PropertyMetadata(new Thickness(0, 0, 0, 0)));
+
+        public Thickness FIconMargin
+        {
+            get { return (Thickness)GetValue(FIconMarginProperty); }
+            set { SetValue(FIconMarginProperty, value); }
+        }
         #endregion
     }
 }
