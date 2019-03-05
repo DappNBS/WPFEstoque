@@ -1,0 +1,17 @@
+﻿<Window x:Class="UrusTools.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UrusTools"
+        mc:Ignorable="d" Background="Transparent"
+        Title="Window1" Height="450" Width="800">
+    <!-- Copyright © NBS-Tech Team 2019.All rights reserved. -->
+
+    <Border x:Name="mainBorder" Background="DarkCyan" Opacity="0.3" OpacityMask="Coral">
+        <WrapPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
+            
+        </WrapPanel>
+    </Border>
+
+</Window>

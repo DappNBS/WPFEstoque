@@ -19,7 +19,7 @@ using System.Windows.Media;
 namespace UrusTools
 {
    
-    public partial class FButton : Button
+    public class FButton : Button
     {
         static Color BLUE_COLOR = Color.FromArgb(255,91, 200, 255);
         static Color WITHE_COLOR = Color.FromArgb(255, 91, 200, 255);

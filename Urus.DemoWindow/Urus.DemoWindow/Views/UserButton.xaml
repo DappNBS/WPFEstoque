@@ -3,21 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:urus="clr-namespace:UrusTools;assembly=Urus.Tools"
+             xmlns:urus="clr-namespace:UrusUI;assembly=Urus.UI"
              xmlns:local="clr-namespace:Urus.DemoWindow.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <!-- Copyright © NBS-Tech Team 2019.All rights reserved. -->
     <Grid>
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Label Content="Button" FontSize="36" Foreground="Red" />
+            <Label Content="Button" FontSize="36" 
+                   Foreground="{DynamicResource ResourceKey={ComponentResourceKey TypeInTargetAssembly={x:Type urus:CustomResources},ResourceId=UrusForeground}}"/>
 
             <Button Width="100" Height="25" BorderBrush="Red" FontStyle="Normal"  BorderThickness="0,0,0,2" Background="LightGray" Foreground="WhiteSmoke">
-                Hello
             </Button>
-
-            <urus:FButton FIcon="&#xf01d;" Margin="3" VerticalContentAlignment="Center" FIconSize="18" FIconMargin="3" Content="hell" Width="200" Background="NavajoWhite" Click="FButton_Click"
-                ></urus:FButton>
+            <!--<urus:FButton FIcon="&#xF01D;" Margin="3" VerticalContentAlignment="Center" Background="White"
+                          FIconSize="18" FIconMargin="3" Content="hell" Width="230"  Click="FButton_Click" RenderTransformOrigin="0.499,0.518"
+                />-->
+            <TextBlock FontFamily="{DynamicResource ResourceKey={ComponentResourceKey TypeInTargetAssembly={x:Type urus:CustomResources},ResourceId=Fontawesome}}"
+                       Text="&#xF01D;" Width="30" FontSize="22" Foreground="Red"
+                       ></TextBlock>
         </WrapPanel>
     </Grid>
 </UserControl>
