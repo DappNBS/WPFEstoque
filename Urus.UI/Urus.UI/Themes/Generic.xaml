@@ -3,6 +3,25 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:UrusUI">
 
+    <SolidColorBrush x:Key="TextForeground" Color="White"/>
+    <!-- U2Font -->
+    <Style x:Key="U2Font" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="/Urus.UI;component/Resources/#U2Font"/>
+        <Setter Property="Foreground" Value="{StaticResource TextForeground}"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    <Style x:Key="U2Font572" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="/Urus.UI;component/Resources/#U2Font572"/>
+        <Setter Property="Foreground" Value="{StaticResource TextForeground}"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+
     <!-- Window Button Icons Style -->
     <Style TargetType="{x:Type local:IconButton}">
         <Setter Property="Cursor" Value="Hand"/>

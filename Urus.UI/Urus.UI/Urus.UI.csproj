@@ -57,6 +57,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FTabButton.cs" />
     <Compile Include="IconButton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -79,9 +80,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resources\iconfont.ttf" />
+    <Resource Include="Resources\U2Font572.ttf" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

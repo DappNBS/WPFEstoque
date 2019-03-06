@@ -3,24 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:urus="clr-namespace:UrusUI;assembly=Urus.UI"
+             xmlns:coreui="clr-namespace:UrusUI;assembly=Urus.UI"
+             xmlns:fa="wpf"
              xmlns:local="clr-namespace:Urus.DemoWindow.Views"
+
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <!-- Copyright © NBS-Tech Team 2019.All rights reserved. -->
     <Grid>
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Label Content="Button" FontSize="36" 
-                   Foreground="{DynamicResource ResourceKey={ComponentResourceKey TypeInTargetAssembly={x:Type urus:CustomResources},ResourceId=UrusForeground}}"/>
+            <coreui:IconButton IconSize="40"
+                               NormalIcon="/Urus.DemoWindow;component/Images/icons/close.png"
+                               HoverIcon="/Urus.DemoWindow;component/Images/icons/close_hover.png"
+                               PressIcon="/Urus.DemoWindow;component/Images/icons/close_press.png"
+                               />
 
-            <Button Width="100" Height="25" BorderBrush="Red" FontStyle="Normal"  BorderThickness="0,0,0,2" Background="LightGray" Foreground="WhiteSmoke">
-            </Button>
-            <!--<urus:FButton FIcon="&#xF01D;" Margin="3" VerticalContentAlignment="Center" Background="White"
-                          FIconSize="18" FIconMargin="3" Content="hell" Width="230"  Click="FButton_Click" RenderTransformOrigin="0.499,0.518"
-                />-->
-            <TextBlock FontFamily="{DynamicResource ResourceKey={ComponentResourceKey TypeInTargetAssembly={x:Type urus:CustomResources},ResourceId=Fontawesome}}"
-                       Text="&#xF01D;" Width="30" FontSize="22" Foreground="Red"
-                       ></TextBlock>
+            <!-- Tab -->
+            <TabControl x:Name="NavTab">
+                <TabItem >hh</TabItem>
+            </TabControl>
+            <Border Background="#DADAD2" BorderBrush="#4A4A4A"   BorderThickness="2,0,0,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="2,2">
+                    <TextBlock Text="sd"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
+           
+                    <Label Content="Hellll" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" FontSize="16"/>
+
+                    <TextBlock Text="&#xf2a3;" Style="{StaticResource U2Font572}" />
+                </StackPanel>
+            </Border>
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Border Background="Blue" BorderBrush="AliceBlue" BorderThickness="0,0,0,1">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="&#xe731;" Style="{StaticResource U2Font}" VerticalAlignment="Center"/>
+                        <TextBlock Text="电话薄" VerticalAlignment="Center" Margin="2"/>
+                    </StackPanel>
+                </Border>
+                <Border>
+
+                </Border>
+            </StackPanel>
+
         </WrapPanel>
     </Grid>
 </UserControl>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-
+using System.Windows.Media;
 
 
 /**
@@ -59,7 +59,46 @@ namespace UrusUI
             set { SetValue(IconSizeProperty, value); }
         }
 
+        public static readonly DependencyProperty IconMarginProperty =
+            DependencyProperty.Register("IconMargin", typeof(Thickness), typeof(FTabButton),
+                new FrameworkPropertyMetadata(new Thickness(2)));
+        public Thickness IconMargin
+        {
+            get { return (Thickness)GetValue(IconMarginProperty); }
+            set { SetValue(IconMarginProperty, value); }
+        }
 
+        /// <summary>
+        /// Tab 下边线
+        /// </summary>
+        public static readonly DependencyProperty BorderThinknessProperty =
+            DependencyProperty.Register("TabThinkness", typeof(Thickness), typeof(FTabButton),
+                new FrameworkPropertyMetadata(new Thickness(0, 0, 0, 1)));
+        public Thickness TabThinkness
+        {
+            get { return (Thickness)GetValue(BorderThicknessProperty); }
+            set { SetValue(BorderThicknessProperty, value); }
+        }
+
+        public static readonly DependencyProperty BorderColorProperty =
+            DependencyProperty.Register("BorderColorProperty", typeof(SolidColorBrush), typeof(FTabButton),
+        new FrameworkPropertyMetadata(new Thickness(0, 0, 0, 1)));
+        public Thickness ActivedThinkness
+        {
+            get { return (Thickness)GetValue(BorderThicknessProperty); }
+            set { SetValue(BorderThicknessProperty, value); }
+        }
+
+        public static readonly DependencyProperty TabBorderBrushProperty =
+            DependencyProperty.Register("TabBorderColor", typeof(Brush), typeof(FTabButton),
+                new FrameworkPropertyMetadata(Brushes.DarkGoldenrod));
+
+        public Brush TabBorderColor {
+            get { return (Brush)GetValue(TabBorderBrushProperty); }
+            set { SetValue(TabBorderBrushProperty,value); }
+        }
+
+ 
 
         #endregion
     }
