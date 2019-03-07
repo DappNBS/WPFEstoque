@@ -1,8 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:u2ui="clr-namespace:UrusUI;assembly=Urus.UI"
-                    xmlns:local="clr-namespace:Urus.DemoWindow">
+                    xmlns:local="clr-namespace:UrusUI">
     <!-- Copyright © NBS-Tech Team 2019.All rights reserved. -->
+   
 
 
+ 
 </ResourceDictionary>

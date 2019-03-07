@@ -6,9 +6,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Urus.UI;component/Themes/Generic.xaml"/>
-
+                <!--  -->
+                <ResourceDictionary Source="pack://application:,,,/Urus.UI;component/Themes/generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Urus.UI;component/Themes/FButtonStyle.xaml"/>
                 <ResourceDictionary Source="Styles/GlobalStyle.xaml"/>
+                
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

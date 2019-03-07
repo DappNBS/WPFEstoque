@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Urus.DemoWindow.Views.MenuControlPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Urus.DemoWindow.Views"
+             xmlns:u2ui="clr-namespace:UrusUI;assembly=Urus.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="700">
+    <!-- Copyright © NBS-Tech Team 2019.All rights reserved. -->
+    <DockPanel  LastChildFill="True">
+        <StackPanel x:Name="sp01" DockPanel.Dock="Top" Orientation="Horizontal">
+            <MenuItem x:Name="all" IsChecked="True" Width="100">
+                全部
+            </MenuItem>
+            <MenuItem x:Name="contacts" IsChecked="True" Width="100">
+                通讯录
+            </MenuItem>
+            <MenuItem x:Name="sms" IsChecked="True" Width="100">
+                消息
+            </MenuItem>
+
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Top" Width="600" Background="LemonChiffon">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*" SharedSizeGroup="one"/>
+                    <ColumnDefinition Width="100*" SharedSizeGroup="two"/>
+                    <ColumnDefinition Width="100*" SharedSizeGroup="three"/>
+                </Grid.ColumnDefinitions>
+
+                <Border x:Name="One">
+                    <MenuItem ></MenuItem>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

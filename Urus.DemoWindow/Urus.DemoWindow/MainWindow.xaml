@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:coreui="clr-namespace:UrusUI;assembly=Urus.UI"
+        xmlns:u2ui="clr-namespace:UrusUI;assembly=Urus.UI"
         xmlns:local="clr-namespace:Urus.DemoWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="980">
@@ -20,7 +20,7 @@
                     <Label Content="Demo" FontSize="24" Margin="5,0,10,0" Foreground="WhiteSmoke"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Grid.Column="1">
-                    <coreui:IconButton NormalIcon="/Urus.DemoWindow;component/Images/icons/close.png"
+                    <u2ui:IconButton NormalIcon="/Urus.DemoWindow;component/Images/icons/close.png"
                                        HoverIcon="/Urus.DemoWindow;component/Images/icons/close_hover.png"
                                        PressIcon="/Urus.DemoWindow;component/Images/icons/close_press.png"
                                        VerticalContentAlignment="Top" VerticalAlignment="Top"
@@ -30,7 +30,7 @@
         </Border>
         <Grid x:Name="brMainBg" Background="Transparent">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="280*" MaxWidth="300"/>
+                <ColumnDefinition Width="280*" MaxWidth="280"/>
                 <ColumnDefinition Width="700*"/>
             </Grid.ColumnDefinitions>
             <!-- Left Nav -->
@@ -44,7 +44,8 @@
                             </ItemsPanelTemplate>
                         </Menu.ItemsPanel>
                         <MenuItem CommandParameter="0" FontSize="18" Header="按钮样式" Click="NavLabel_Click" HorizontalAlignment="Stretch"></MenuItem>
-                        <MenuItem CommandParameter="1" FontSize="18" Header="Test样式" Click="NavLabel_Click" HorizontalAlignment="Stretch"></MenuItem>
+                        <MenuItem CommandParameter="1" FontSize="18" Header="菜单按钮" Click="NavLabel_Click" HorizontalAlignment="Stretch"></MenuItem>
+                        <MenuItem CommandParameter="2" FontSize="18" Header="Test样式" Click="NavLabel_Click" HorizontalAlignment="Stretch"></MenuItem>
                     </Menu>
 
                    

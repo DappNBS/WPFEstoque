@@ -21,7 +21,7 @@ using System.Windows.Shapes;
  * │
  * │Version	: V1.0.0.0
  * │Author	: lanbery
- * │CreatTime	: 2019/3/4 23:32:49													
+ * │CreatTime	: 2019/3/7 17:28:57													
  * ├───────────────────────────────────────────────────────────────────────┤
  * │Copyright © NBS-Tech Team 2019.All rights reserved.
  * └───────────────────────────────────────────────────────────────────────┘
@@ -29,29 +29,13 @@ using System.Windows.Shapes;
 namespace Urus.DemoWindow.Views
 {
     /// <summary>
-    /// UserButton.xaml 的交互逻辑
+    /// MeunControlPage.xaml 的交互逻辑
     /// </summary>
-    public partial class UserButton : UserControl
+    public partial class MenuControlPage : UserControl
     {
-        public UserButton()
+        public MenuControlPage()
         {
             InitializeComponent();
-        }
-
-        private void FButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void FTabButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Music_Click(object sender,RoutedEventArgs e)
-        {
-            bool b = this.FVBtnDemo.IsSelected;
-            this.FVBtnDemo.IsSelected = b ? false : true;
         }
     }
 }

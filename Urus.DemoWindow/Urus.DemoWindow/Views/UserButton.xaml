@@ -3,47 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:coreui="clr-namespace:UrusUI;assembly=Urus.UI"
-             xmlns:fa="wpf"
-             xmlns:local="clr-namespace:Urus.DemoWindow.Views"
+             xmlns:u2ui="clr-namespace:UrusUI;assembly=Urus.UI"
+             xmlns:local="clr-namespace:Urus.DemoWindow"
 
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <!-- Copyright © NBS-Tech Team 2019.All rights reserved. -->
     <Grid>
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <coreui:IconButton IconSize="40"
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <u2ui:IconButton IconSize="40"
                                NormalIcon="/Urus.DemoWindow;component/Images/icons/close.png"
                                HoverIcon="/Urus.DemoWindow;component/Images/icons/close_hover.png"
                                PressIcon="/Urus.DemoWindow;component/Images/icons/close_press.png"
                                />
 
             <!-- Tab -->
-            <TabControl x:Name="NavTab">
-                <TabItem >hh</TabItem>
-            </TabControl>
+
             <Border Background="#DADAD2" BorderBrush="#4A4A4A"   BorderThickness="2,0,0,0">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="2,2">
                     <TextBlock Text="sd"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
            
                     <Label Content="Hellll" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" FontSize="16"/>
 
-                    <TextBlock Text="&#xf2a3;" Style="{StaticResource U2Font572}" />
+                    <TextBlock Text="&#xf2a3;" Style="{DynamicResource FontAwesome}" />
                 </StackPanel>
             </Border>
 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <Border Background="Blue" BorderBrush="AliceBlue" BorderThickness="0,0,0,1">
+                <Border Background="#DADAD2" BorderBrush="#4A4A4A" BorderThickness="0,0,0,2">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock Text="&#xe731;" Style="{StaticResource U2Font}" VerticalAlignment="Center"/>
-                        <TextBlock Text="电话薄" VerticalAlignment="Center" Margin="2"/>
+                        <TextBlock Text="&#xe731;" Style="{StaticResource U2Font}" VerticalAlignment="Center" Foreground="WhiteSmoke"/>
+                        <TextBlock Text="电话薄" VerticalAlignment="Center" Margin="2" Foreground="WhiteSmoke"/>
                     </StackPanel>
                 </Border>
-                <Border>
-
+                <Border Background="#DADAD2" BorderBrush="#4A4A4A" BorderThickness="0,0,0,2">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="&#xe731;" Style="{StaticResource U2Font}" VerticalAlignment="Center" Foreground="#7FFFD4"/>
+                        <TextBlock Text="电话薄" VerticalAlignment="Center" Margin="2" Foreground="#7FFFD4"/>
+                    </StackPanel>
                 </Border>
+                <Border Background="#4A4A4A" BorderBrush="#7FFFD4" BorderThickness="0,0,0,2" Opacity="0.45">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="&#xe644;" Style="{StaticResource U2Font}" VerticalAlignment="Center" Foreground="#7FFFD4"/>
+                        <TextBlock Text="音乐" VerticalAlignment="Center" Margin="2" Foreground="#7FFFD4"/>
+                    </StackPanel>
+                </Border>
+
+                <u2ui:FButton x:Name="FMusic" FIcon="&#xe644;" FIconSize="18" Width="60" FontSize="14">音乐</u2ui:FButton>
+                <u2ui:FButton x:Name="FMusicTransparency" FIcon="&#xe644;" Style="{StaticResource FButton_Transparency}">音乐</u2ui:FButton>
             </StackPanel>
 
+   
         </WrapPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,2">
+            <u2ui:FButton x:Name="FMusicTransparency1" FIcon="&#xe644;" >音乐</u2ui:FButton>
+
+            <u2ui:FVButton x:Name="FVBtnDemo" FIcon="&#xe644;" BorderThickness="0,0,0,2" CornerRadius="0"
+                           Style="{StaticResource FBVStyle}" Click="Music_Click">音乐</u2ui:FVButton>
+
+            <!--<u2ui:FVButton x:Name="FVMusic19" FIcon="&#xe644;" IsChecked="False"
+                           >音乐</u2ui:FVButton>-->
+        </StackPanel>
     </Grid>
 </UserControl>

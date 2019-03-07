@@ -56,6 +56,9 @@ namespace Urus.DemoWindow
                
                     break;
                 case "1":
+                    uc = new MenuControlPage();
+                    break;
+                case "2":
                     uc = new TestSimple();
                     break;
                 default:
