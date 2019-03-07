@@ -4,7 +4,7 @@
     xmlns:local="clr-namespace:UrusUI">
 
     <SolidColorBrush x:Key="TextForeground" Color="WhiteSmoke"/>
-    
+    <SolidColorBrush x:Key="FontTextForeground" Color="#666666"/>
     <!-- U2Font -->
     <Style x:Key="U2Font" TargetType="{x:Type TextBlock}">
         <Setter Property="FontFamily" Value="/Urus.UI;component/Resources/#U2Font"/>
@@ -71,7 +71,7 @@
                 
             <!-- Icon/Text -->
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center"
-                        Margin="{TemplateBinding Padding}"
+                        Margin="{TemplateBinding Padding}" 
                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
                 <TextBlock x:Name="icon" Margin="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FIconMargin}"
                            RenderTransformOrigin="0.5,0.5" Style="{StaticResource U2Font}"
@@ -172,6 +172,71 @@
         <Setter Property="Template" Value="{StaticResource FButton_Template}"/>
     </Style>
     <!-- 透明样式 -->
+    <ControlTemplate x:Key="TransparencyFBTempalte" TargetType="{x:Type local:FButton}">
+        <Border x:Name="border" Background="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Background}"
+                Height="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Height}"
+                Width="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Width}"
+                CornerRadius="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=CornerRadius}">
+
+            <!-- Icon/Text -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"
+                        Margin="{TemplateBinding Padding}" 
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
+                <TextBlock x:Name="icon" Margin="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FIconMargin}"
+                           RenderTransformOrigin="0.5,0.5" Style="{StaticResource U2Font}"
+                           Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FIcon}"
+                           FontSize="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FIconSize}"
+                           Foreground="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Foreground}">
+                    <TextBlock.RenderTransform>
+                        <RotateTransform x:Name="transIcon" Angle="0"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+                <TextBlock VerticalAlignment="Center" x:Name="txt" 
+                           TextDecorations="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=ContentDecorations}"
+                           Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Content}"
+                           FontSize="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FontSize}"
+                           Foreground="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Foreground}"></TextBlock>
+            </StackPanel>
+        </Border>
+        <!-- 触发器 -->
+        <ControlTemplate.Triggers>
+            <!-- hover -->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" TargetName="icon"
+                        Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FButtonHoverForeground}"/>
+                <Setter Property="Foreground"  TargetName="txt"
+                        Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FButtonHoverForeground}"/>
+            </Trigger>
+            <!-- Pressed -->
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Opacity" Value="0.5" TargetName="border"/>
+            </Trigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="true"/>
+                    <Condition Property="AllowsAnimation" Value="true"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transIcon" Storyboard.TargetProperty="Angle"
+                                             To="360" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+                <MultiTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="transIcon"
+                                             Storyboard.TargetProperty="Angle" To="0" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.ExitActions>
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
     <!--背景透明的FButton样式-->
     <Style x:Key="FButton_Transparency" TargetType="{x:Type local:FButton}">
         <Setter Property="Background" Value="Transparent" />
@@ -186,7 +251,7 @@
         <Setter Property="CornerRadius" Value="0" />
         <Setter Property="FontSize" Value="13" />
         <Setter Property="FIconSize" Value="18" />
-        <Setter Property="Template" Value="{StaticResource FButton_Template}"/>
+        <Setter Property="Template" Value="{StaticResource TransparencyFBTempalte}"/>
         <Setter Property="Padding" Value="3,1,3,1" />
         <Setter Property="Content" Value="{x:Null}" />
         <Setter Property="FIconMargin" Value="0,0,2,0" />
@@ -202,10 +267,10 @@
                 CornerRadius="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=CornerRadius}"
                 BorderBrush="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=BorderBrush}"
                 BorderThickness="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=BorderThickness}"
+                Margin="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Margin}"
                 >
-
             <!-- Icon/Text -->
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center"
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top"
                         Margin="{TemplateBinding Padding}"
                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
                 <TextBlock x:Name="icon" Margin="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FIconMargin}"
@@ -218,7 +283,7 @@
                     </TextBlock.RenderTransform>
                 </TextBlock>
 
-                <TextBlock VerticalAlignment="Center" x:Name="txt" 
+                <TextBlock VerticalAlignment="Bottom" x:Name="txt" 
                            TextDecorations="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=ContentDecorations}"
                            Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Content}"
                            FontSize="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FontSize}"
@@ -307,16 +372,16 @@
         <Setter Property="CheckedBorderBrush" Value="{StaticResource CheckedBorderBrushStyle}"/>
         <Setter Property="NormalBorderBrush" Value="{StaticResource FButtonPressedBackground}"/>
         <Setter Property="BorderBrush" Value="{StaticResource FButtonPressedBackground}"/>
-        <Setter Property="CheckedBorderThickness" Value="0,0,0,2"/>
+        <Setter Property="CheckedBorderThickness" Value="0,0,0,6"/>
 
         <Setter Property="IsSelected" Value="False"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="Width" Value="60"/>
-        <Setter Property="Height" Value="40"/>
+        <Setter Property="Height" Value="Auto"/>
         <Setter Property="FontSize" Value="10"/>
         <Setter Property="CornerRadius" Value="0"/>
         <Setter Property="FIconSize" Value="16" />
-        <Setter Property="Padding" Value="2,1,2,1"/>
+        <Setter Property="Padding" Value="2,4,2,0"/>
         <Setter Property="Content" Value="{x:Null}" />
         <Setter Property="FIconMargin" Value="0,2,0,2"/>
         <Setter Property="AllowsAnimation" Value="True"/>
