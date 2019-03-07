@@ -64,8 +64,8 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,2">
             <u2ui:FButton x:Name="FMusicTransparency1" FIcon="&#xe644;" >音乐</u2ui:FButton>
 
-            <u2ui:FVButton x:Name="FVBtnDemo" FIcon="&#xe644;" BorderThickness="0,0,0,2" CornerRadius="0"
-                           Style="{StaticResource FBVStyle}" Click="Music_Click">音乐</u2ui:FVButton>
+            <u2ui:FVButton x:Name="FVBtnDemo" FIcon="&#xe644;" BorderThickness="0,0,0,2" CornerRadius="0" Width="100"
+                          Click="Music_Click">音乐</u2ui:FVButton>
 
             <!--<u2ui:FVButton x:Name="FVMusic19" FIcon="&#xe644;" IsChecked="False"
                            >音乐</u2ui:FVButton>-->

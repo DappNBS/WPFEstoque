@@ -249,18 +249,24 @@
                 <Setter Property="Opacity" Value="0.5" TargetName="border"/>
             </Trigger>
 
-            <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Background" TargetName="border"
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsSelected" Value="True"/>
+                    <Condition Property="IsEnabled" Value="True"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" TargetName="border"
                         Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=PressedBackground}"/>
-                <Setter Property="BorderBrush" TargetName="border"
+                    <Setter Property="BorderBrush" TargetName="border"
                         Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=CheckedBorderBrush}"/>
-                <Setter Property="BorderThickness" TargetName="border"
+                    <Setter Property="BorderThickness" TargetName="border"
                         Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=CheckedBorderThickness}"/>
-                <Setter Property="Foreground" TargetName="icon" 
+                    <Setter Property="Foreground" TargetName="icon" 
                         Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=PressedForeground}"/>
-                <Setter Property="Foreground" TargetName="txt"
+                    <Setter Property="Foreground" TargetName="txt"
                         Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=PressedForeground}"/>
-            </Trigger>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
 
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -291,7 +297,7 @@
     
     <!--  -->
     <SolidColorBrush x:Key="CheckedBorderBrushStyle" Color="#389BD6"/>
-    <Style TargetType="{x:Type local:FVButton}" x:Key="FBVStyle">
+    <Style TargetType="{x:Type local:FVButton}" >
         <Setter Property="Background" Value="{StaticResource FButtonBackground}"/>
         <Setter Property="Foreground" Value="{StaticResource TextForeground}"/>
         <Setter Property="MouseOverBackground" Value="{StaticResource FButtonPressedBackground}"/>
@@ -309,10 +315,10 @@
         <Setter Property="Height" Value="40"/>
         <Setter Property="FontSize" Value="10"/>
         <Setter Property="CornerRadius" Value="0"/>
-        <Setter Property="FIconSize" Value="14" />
+        <Setter Property="FIconSize" Value="16" />
         <Setter Property="Padding" Value="2,1,2,1"/>
         <Setter Property="Content" Value="{x:Null}" />
-        <Setter Property="FIconMargin" Value="1,0,1,0"/>
+        <Setter Property="FIconMargin" Value="0,2,0,2"/>
         <Setter Property="AllowsAnimation" Value="True"/>
         <Setter Property="Template" Value="{StaticResource FVButton_Template}"/>
     </Style>
