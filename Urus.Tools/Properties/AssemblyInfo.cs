@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Urus.Tools")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("NBS Co.")]
 [assembly: AssemblyProduct("Urus.Tools")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright © NBS Tech Team 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("ebd4ca0e-a5fc-4a22-8043-fd16f29f0569")]
+[assembly: Guid("3cb7f544-3f9a-450e-bcfd-f056b28897bc")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,28 +8,29 @@ using System.Threading.Tasks;
 
 /**
  * ┌───────────────────────────────────────────────────────────────────────┐
- * │Project	: Urus.Tools
+ * │Project	: UrusUI.Convert
  * │ 
  * │Comment	:
  * │
  * │Version	: V1.0.0.0
  * │Author	: lanbery
- * │CreatTime	: 2019/3/5 0:46:03													
+ * │CreatTime	: 2019/3/14 14:17:23													
  * ├───────────────────────────────────────────────────────────────────────┤
  * │Copyright © NBS-Tech Team 2019.All rights reserved.
  * └───────────────────────────────────────────────────────────────────────┘
  */
-namespace UrusTools
+namespace UrusUI.Convert
 {
-    interface IController
+    public class AvatarName2ImageConvertion : System.Windows.Data.IValueConverter
     {
-        ControlType GetControlType();
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
 
-    }
-
-    public enum ControlType
-    {
-        ctButton,
-        ctSimple,
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
